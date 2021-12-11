@@ -1,0 +1,56 @@
+@import '/src/colors/colors.scss';
+
+.btn {
+    $module: ".btn";
+
+    padding: 1em;
+    background-color: #FAFAFA;
+    border: 1px solid gray;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+
+    &--primary{
+        $this: "#{$module}--primary";
+
+        background-color: var(--btn-primary);
+        border-color: var(--btn-primary);
+        color: #FAFAFA;
+    }
+    &--secondary{
+        $this: "#{module}--secondary";
+
+        background-color: var(--btn-secondary);
+        border-color: var(--btn-secondary);
+        color: #FAFAFA;
+    }
+    
+    &--rounded{
+        border-radius: 10px;
+    }
+
+    &--pressed{
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px #999;
+    }
+
+    &--pressed:active{
+        box-shadow: 0 4px #666;
+        transform: translateY(2px);
+    }
+
+    &--primary#{&}--pressed{
+        &:hover{
+            background-color: var(--btn-primary-dark);
+        }
+    }
+
+    &--secondary#{&}--pressed{
+        &:hover{
+            background-color: var(--btn-secondary-dark);
+        }
+    }
+
+}
+
